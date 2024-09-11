@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Paradise - The Best Pizza in the World!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background: red;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            animation: slideIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        nav {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            text-align: center;
+            width: calc(100% - 2em);
+        }
+
+        nav a {
+            color: white;
+            background-color: darkred;
+            padding: 0.6em 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 0.2em;
+        }
+
+        nav a:hover {
+            background-color: #c62828;
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .order-section h2 {
+            font-size: 2.8em;
+            color: red;
+            margin-bottom: 0.5em;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .pizza-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 600px;
+            margin: auto;
+            padding: 1.5em;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .pizza-card h3 {
+            margin-top: 0;
+            color: red;
+            font-size: 2em;
+        }
+
+        .pizza-info p {
+            font-size: 1.2em;
+            color: #555;
+            margin: 1em 0;
+        }
+
+        .order-button {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 0.8em 2em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: darkred;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: red;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Pizza Paradise</h1>
+        <p>The Best Pizza in the World!</p>
+    </header>
+    <main>
+        <section class="order-section">
+            <h2>Order Your Favorite Pizza</h2>
+            <div class="pizza-card">
+                <div class="pizza-info">
+                    <h3>Delicious Pizza</h3>
+                    <p>Freshly baked with the finest ingredients. Enjoy the best pizza in town.</p>
+                    <a href="{% url 'login' %}" class="order-button">Order Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Paradise. All rights reserved.</p>
+    </footer>
+</body>
+</html>
